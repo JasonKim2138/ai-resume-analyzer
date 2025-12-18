@@ -11,6 +11,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+//home page function that contains navigation bar that you can upload your resume and some examples of resumes
 export default function Home() {
     return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
       <Navbar>
