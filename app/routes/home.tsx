@@ -27,14 +27,14 @@ export default function Home() {
           <h1>Track Your Applications & Resume Ratings</h1>
           <h2>Review your submissions and check AI-powered feedback</h2>
         </div>
+        {resumes.length > 0 && (
+            //div is container in HTML form like this webpage contains the following:
+            <div className="resumes-section">
+              {resumes.map((resume) => (
+                  <ResumeCard key={resume.id} resume={resume}></ResumeCard>
+              ))}
+            </div>
+        )}
       </section>
-      {resumes.length > 0 && (
-          //div is container in HTML form like this webpage contains the following:
-          <div className="resumes-section">
-            {resumes.map((resume) => (
-                <ResumeCard key={resume.id} resume={resume}></ResumeCard>
-            ))}
-          </div>
-      )}
     </main>
 }
